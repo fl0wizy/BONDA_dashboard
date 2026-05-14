@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+  /* Calmer dark — less navy/cyber, slightly warmer charcoal. */
+  --background: #0a0a0c;
+  --foreground: #ececef;
+  --card-bg: #131316;
+  --card-border: #2a2a30;
+  --accent-green: #34d399;
+  --accent-red: #f87171;
+  --accent-yellow: #fbbf24;
+  --accent-blue: #60a5fa;
+  --accent-purple: #a78bfa;
+  /* Readable secondary text — bumped from gray-500 to gray-400 for legibility. */
+  --muted: #9ca3af;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
+  --color-accent-green: var(--accent-green);
+  --color-accent-red: var(--accent-red);
+  --color-accent-yellow: var(--accent-yellow);
+  --color-accent-blue: var(--accent-blue);
+  --color-accent-purple: var(--accent-purple);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  /* Bigger base for legibility — 16px → 17px. Korean glyphs read more comfortably. */
+  font-size: 17px;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--card-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+
+/* Recharts tooltip */
+.recharts-default-tooltip {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--card-border) !important;
+  border-radius: 8px !important;
+}
