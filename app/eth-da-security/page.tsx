@@ -39,11 +39,6 @@ export default function EthDaSecurityPage() {
         </p>
       </div>
 
-      {/* C1 — top: maps EigenDA vocabulary onto Ethereum's anchor */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-        <C1_CasperReadout />
-      </div>
-
       <div>
         <SectionTitle
           kind="safety"
@@ -81,6 +76,7 @@ export default function EthDaSecurityPage() {
           hint="gossip 전파 지연은 safety (sidecar 가 늦으면 attest 못 받음) 와 liveness (head 가 안 잡힘) 양쪽의 leading indicator."
         />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <C1_CasperReadout />
           <C2_SidecarPropagation />
           <C3_GossipArrival />
           <C4_ReorgTimeline />
